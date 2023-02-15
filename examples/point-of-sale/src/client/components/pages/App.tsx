@@ -8,7 +8,7 @@ import { AppInitialProps } from 'next/dist/shared/lib/utils';
 import { FC, useMemo } from 'react';
 import { MAINNET_ENDPOINT, MAINNET_USDC_MINT } from '../../utils/constants';
 import { ConfigProvider } from '../contexts/ConfigProvider';
-import { FullscreenProvider } from '../context/FullscreenProvider';
+import { FullscreenProvider } from '../contexts/FullscreenProvider';
 import { PaymentProvider } from '../contexts/PaymentProvider';
 import { ThemeProvider } from '../contexts/ThemeProvider';
 import { TransactionsProvider } from '../contexts/TransactionsProvider';
@@ -46,7 +46,6 @@ const App: FC<AppProps> & { getInitialProps(appContext: AppContext): Promise<App
         ] : []),
         [connectWallet, network]
     );
-
     // Toggle comments on these lines to use transaction requests instead of transfer requests.
     const link = undefined;
     // const link = useMemo(() => new URL(`${baseURL}/api/`), [baseURL]);
@@ -115,5 +114,3 @@ App.getInitialProps = async (appContext) => {
         host,
     };
 };
-
-export default App;
