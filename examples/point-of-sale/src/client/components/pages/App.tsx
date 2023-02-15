@@ -46,6 +46,7 @@ const App: FC<AppProps> & { getInitialProps(appContext: AppContext): Promise<App
         ] : []),
         [connectWallet, network]
     );
+
     // Toggle comments on these lines to use transaction requests instead of transfer requests.
     const link = undefined;
     // const link = useMemo(() => new URL(`${baseURL}/api/`), [baseURL]);
@@ -114,3 +115,5 @@ App.getInitialProps = async (appContext) => {
         host,
     };
 };
+
+export default App;
